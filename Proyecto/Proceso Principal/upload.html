@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Proyecto</title>
+</head>
+<body class="bg-secondary">
+
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">ULEAM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active text-white" href="#">Reserva</a>
+          <a class="nav-link active text-white" href="#">Buscador</a>
+          <a class="nav-link active text-white" aria-disabled="true">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="container mt-5">
+  <div class="card text-center ">
+    <div class="card-body ">
+      <form>
+        <div class="mb-3">
+          <label for="nombreEstudiante" class="form-label">Nombres</label>
+          <input type="text" class="form-control" id="tituloProyecto" aria-describedby="nombre" required oninput="validarCampo(this)" >
+        </div>
+  
+         <div class="mb-3">
+            <label for="tituloProyecto" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos"  required oninput="validarCampo(this)">
+          </div>
+
+          <div class="mb-3">
+            <label for="nombreEstudiante" class="form-label">Direccion de Correo</label>
+            <input type="text" class="form-control" id="nombreEstudiante" aria-describedby="nombre" required oninput="validarCampo(this)" >
+          </div>
+
+          <div class="mb-3">
+            <label for="nombreEstudiante" class="form-label">Numero de Telefono</label>
+            <input type="text" class="form-control" id="Numero" aria-describedby="nombre" required oninput="validarCampo(this)" >
+          </div>
+          
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="asesor">Seleccionar Numero de Acompaniantes</label>
+            <select class="form-select" id="asesor" required>
+            <option selected>Acompaniantes:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+          </div>
+  
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="archivoProyecto">Subir cedula </label>
+            <input type="file" class="form-control" accept=".pdf" id="archivoProyecto" required oninput="validarCampo(this)">
+          </div>
+  
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="confirmacionAutor">
+            <label class="form-check-label" for="confirmacionAutor">Aceptar Terminos y condiciones</label>
+          </div>
+  
+          <button type="button" class="btn btn-success" onclick="subirProyecto()">Aceptar</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+    <div class="container">
+      <div class="card text-center " id="trabajosList">
+        <div class="card-header">
+            Reserva Pendientes
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Reservas en espera de aprobacion</h5>
+        </div>
+     
+      </div>
+
+    </div>
+    
+    <!-- Enlace a los archivos JavaScript -->
+    <script src="ScriptsGlobales.js">  </script>
+    <script src="upload.js"></script>
+    <!-- Enlace al archivo JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

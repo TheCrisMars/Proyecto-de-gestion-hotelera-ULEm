@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="Styles2.css">
+  <style>
+    .nav__links .link a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+ <nav class="navbar">
+    <div class="nav__logo__container">
+        <a href="#">
+          <img src="logo.png" alt="Hostelius" class="nav__logo" />
+        </a>
+        <p class="logo-text">Hostelius</p>
+      </div>
+    <ul class="nav__links tc">
+        <li class="link"><a href="#">Inicio</a></li>
+        <li class="link"><a href="#">Reserva</a></li>
+        <li class="link"><a href="#">Blog</a></li>
+        <li class="link"><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+ <!-- Formulario de login -->
+  <div class="login-container login">
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form">
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit" onclick="redirectToDashboard()" id="sign-in">Iniciar Sesión</button>
+    </form>
+    <p>¿No tienes una cuenta? <button type="submit" id="sign-up"> Registrarse</button> </p>
+  </div>
+
+
+ <!-- Formulario de registro -->
+  <div class="login-container register hide">
+    <h2>Registrarse</h2>
+    <form id="registro-form">
+      <input type="nombres" placeholder="Nombres" required>
+      <input type="apellidos" placeholder="Apellidos" required>
+      <input type="CI" placeholder="Ceduala de Identidad" required>
+      <input type="direccion" placeholder="Direccion" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="password" placeholder="Contraseña" required>
+      <input type="password" placeholder="Confirmar Contraseña" required>
+      <button type="submit" id="">Registrarse</button>
+    </form>
+    
+    <p>¿Ya tienes una cuenta? <button type="button" id="btn-signin-back"> Iniciar Sesión</button></p>
+  </div>
+
+  <script src="script.js"></script>
+  
+  <footer>
+    <div class="about">
+        <h2>Sobre Hostelius</h2>
+        <p>Hotelius es un sitio web de reservas de hoteles de primer nivel que ofrece una forma cómoda y sencilla de encontrar y reservar alojamiento en todo el mundo.</p>
+    </div>
+    <div class="sections">
+        <section>
+            <h3>Contacto</h3>
+        </section>
+        <section>
+            <h3>Términos y Condiciones</h3>
+        </section>
+        <section>
+            <h3>Centro de Ayuda</h3>
+        </section>
+    </div>
+</footer>
+</body>
+</html>

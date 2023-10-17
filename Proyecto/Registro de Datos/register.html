@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Habitaciones</title>
+    <link rel="stylesheet" href="stylesR.css">
+</head>
+<body>
+    <section>
+        <nav class="navbar">
+            <div class="nav__logo__container">
+                <a href="#">
+                <img src="logo.png" alt="ULEAM LOGO" class="nav__logo" />
+                </a>
+                <p class="logo-text">ULEAM</p>
+          </div>
+            <ul class="nav__links tc">
+                <li class="link"><a href="#">Inicio</a></li>
+                <li class="link"><a href="#">Reserva</a></li>
+                <li class="link"><a href="#">Buscador</a></li>
+                <li class="link"><a href="#">Contacto</a></li>
+            </ul>
+      </nav>
+    <section>
+      <section>    
+        <section class="card">
+            <div class="card-header">
+
+            </div>
+            <div class="card-content">
+                <h2 class="titlee">Registro de habitacion</h2>
+                <form onsubmit="return validarFormulario()" enctype="multipart/form-data">
+                    <label for="nombreHabitacion">Nombre de la habitación:</label>
+                    <input type="text" id="nombreHabitacion" name="nombreHabitacion" required><br><br>
+            
+                    <label for="tarifa">Tarifa (USD, máximo $1000):</label>
+                    <input type="number" id="tarifa" name="tarifa" step="20" max="1000" required><br><br>
+            
+                    <label for="fotoHabitacion">Foto de la habitación:</label>
+                    <input type="file" id="fotoHabitacion" name="fotoHabitacion" accept="image/*" required><br><br>
+            
+                    <label for="amenidades">Amenidades:</label><br>
+                    <input type="checkbox" id="aireAcondicionado" name="amenidades" value="Aire Acondicionado"> Aire Acondicionado<br>
+                    <input type="checkbox" id="minibar" name="amenidades" value="Minibar"> Minibar<br>
+                    <input type="checkbox" id="estacionamiento" name="amenidades" value="Estacionamiento"> Estacionamiento<br>
+                    <input type="checkbox" id="wifiGratis" name="amenidades" value="WIFI gratis"> WIFI gratis<br>
+                    <input type="checkbox" id="balconTerraza" name="amenidades" value="Balcon o Terraza"> Balcón o Terraza<br><br>
+            
+                    <label>Capacidad:</label><br>
+                    <input type="radio" id="capacidad1" name="capacidad" value="1"> 1 persona<br>
+                    <input type="radio" id="capacidad2" name="capacidad" value="2"> 2 personas<br>
+                    <input type="radio" id="capacidad3" name="capacidad" value="3"> 3 personas<br><br>
+            
+                    <label for="especificacion">Especificación:</label>
+                    <textarea id="especificacion" name="especificacion" rows="4" cols="50"></textarea><br><br>
+            
+                    <input type="submit" class="boton-registrar" value="Registrar Habitación">
+                    <input type="reset" class="boton-cancelar" value="Cancelar">
+                </form>
+            </div>
+        </section>
+</section>
+    <script>
+        function validarFormulario() {
+            var nombreHabitacion = document.getElementById("nombreHabitacion").value;
+            var tarifa = document.getElementById("tarifa").value;
+            var fotoHabitacion = document.getElementById("fotoHabitacion").value;
+            var capacidad = document.querySelector('input[name="capacidad"]:checked');
+
+            if (nombreHabitacion.trim() === "") {
+                alert("Por favor, ingrese el nombre de la habitación.");
+                return false;
+            }
+
+            if (!/^\d+(\.\d{2})?$/.test(tarifa)) {
+                alert("La tarifa debe ser un número válido.");
+                return false;
+            }
+
+            if (fotoHabitacion.trim() === "") {
+                alert("Por favor, suba una foto de la habitación.");
+                return false;
+            }
+
+            if (!capacidad) {
+                alert("Seleccione la capacidad de la habitación.");
+                return false;
+            }
+
+            // Mostrar mensaje de éxito si todos los datos son válidos
+            alert("Se envió de forma correcta");
+            return true; // Continuar con el envío del formulario
+        }
+    </script>
+    <footer>
+        <div class="about">
+            <h2>Sobre ULEAM</h2>
+            <p>ULEAM es un sitio web de reservas de hoteles de primer nivel que ofrece una forma cómoda y sencilla de encontrar y reservar alojamiento en todo el mundo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

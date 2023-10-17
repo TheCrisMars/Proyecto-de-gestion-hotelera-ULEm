@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #2c3855;
+    --primary-color-dark: #435681;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  
+  .prueba {
+      background-color: rgba(12, 52, 60, 0.873); /* Blanco Roto */;
+      border-radius: 3rem;
+  }
+  
+  .prueb {
+      background-color: #1c1c1c;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .title {
+    color:#1c1c1c;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    width: 100%;
+    display: flex;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  nav {
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+  }
+
+  .nav__links li a {
+    color: white; /* Cambia el color del texto a blanco */
+}
+  
+  .nav__logo__container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  
+  
+  .nav__logo__container .logo-text {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto según tus preferencias */
+    font-weight: 700; /* Puedes cambiar el peso de la fuente si lo deseas */
+    font-family: "TuTipoDeFuente", sans-serif; /* Cambia "TuTipoDeFuente" al nombre de la fuente deseada */
+    color: white;
+    margin: 0; /* Elimina cualquier margen adicional si lo hubiera */
+  }
+  
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer {
+    background-color: rgb(201, 201, 201);
+    position:center;
+    transform: translateY(10%);
+  }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 5rem;
+  }
+  
+  .footer__col h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .footer__col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .footer__col p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .footer__col p:hover {
+    color: var(--text-dark);
+  }
+  
+  .footer__bar {
+    position: relative;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-align: right;
+    overflow: hidden;
+  }
+  
+  .footer__bar::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 28rem;
+    transform: translateY(-50%);
+    width: 20rem;
+    height: 2px;
+    background-color: var(--text-light);
+  }
+
+  header {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 0px;
+}
+
+
+/* titulo del buscador */
+header h1 {
+    margin: 0;
+    font-family:'Courier New', Courier, monospace; 
+    font-size: 36px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #fff; /* Fondo blanco para resaltar el formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar el formulario */
+}
+
+#search-form input,
+#search-form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#search-form input {
+    flex: 1; /* Que el input ocupe el espacio disponible */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-opaco para el input */
+}
+
+#search-form button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efecto de transición para el botón */
+}
+
+#search-form button:hover {
+    background-color: #005c91; /* Cambia el color al pasar el ratón sobre el botón */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.room-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    transition: transform 0.3s;
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+}
+
+.room-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.more-info {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
