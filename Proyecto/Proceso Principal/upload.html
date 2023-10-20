@@ -36,17 +36,17 @@
         </div>
   
          <div class="mb-3">
-            <label for="tituloProyecto" class="form-label">Apellidos</label>
+            <label for="apellidos" class="form-label">Apellidos</label>
             <input type="text" class="form-control" id="apellidos"  required oninput="validarCampo(this)">
           </div>
 
           <div class="mb-3">
-            <label for="nombreEstudiante" class="form-label">Direccion de Correo</label>
+            <label for="correo" class="form-label">Direccion de Correo</label>
             <input type="text" class="form-control" id="nombreEstudiante" aria-describedby="nombre" required oninput="validarCampo(this)" >
           </div>
 
           <div class="mb-3">
-            <label for="nombreEstudiante" class="form-label">Numero de Telefono</label>
+            <label for="numero de telefono" class="form-label">Numero de Telefono</label>
             <input type="text" class="form-control" id="Numero" aria-describedby="nombre" required oninput="validarCampo(this)" >
           </div>
           
@@ -57,18 +57,30 @@
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="4">4</option>
             </select>
           </div>
   
           <div class="input-group mb-3">
-            <label class="input-group-text" for="archivoProyecto">Subir cedula </label>
-            <input type="file" class="form-control" accept=".pdf" id="archivoProyecto" required oninput="validarCampo(this)">
+            <label class="input-group-text" for="archivoProyecto">Numero de tarjeta</label>
+            <input type="text" class="form-control" id="archivoProyecto" required oninput="validarTarjeta(this)">
+          </div>
+        
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="fechaExpiracion">Fecha de Expiración</label>
+            <input type="text" class="form-control" id="fechaExpiracion" required oninput="validarFechaExpiracion(this)">
+          </div>
+        
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="codigoSeguridad">Código de Seguridad</label>
+            <input type="text" class="form-control" id="codigoSeguridad" required oninput="validarCodigoSeguridad(this)">
           </div>
   
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="confirmacionAutor">
             <label class="form-check-label" for="confirmacionAutor">Aceptar Terminos y condiciones</label>
           </div>
+          
   
           <button type="button" class="btn btn-success" onclick="subirProyecto()">Aceptar</button>
       </form>
